@@ -34,12 +34,12 @@ fn main() -> std::io::Result<()> {
     let param_amount = args.len();
     if param_amount < 4 {
         println!("\nExample:\nhyperlink-one-time-pad \"secret_stuff.zip\" add http://example.com/vid.mp4 http://example.com/data.rar\n\nDescription:\nThe above example uses two files from the internet (both should have a bigger file size than the file to encrypt) that are both downloaded automatically and \"layed over\" the file to encrypt. Decrypting works the same way using the parameter sub instead of add. You only need to memorize the files that are online available and don't need to store or exchange huge keys, which is a negative point with the normal one-time-pad. It is also possible to use local files as keys instead of hyperlinks.\n\nNotes:\n- Remember that the internet providers may safe the files you download. Use this on top of normal encryption methods.\n- The order of the key parameters does not matter.\n- Hyperlinks must start with http:// or https://.");
-        process::exit(1);
+        process::exit(0);
     }
     
     if !Path::new(&args[1]).exists() {
         println!("Error: File {} does not exist.", args[1]);
-        process::exit(1);
+        process::exit(0);
     }
     
     let mut encrypt = false;
@@ -48,7 +48,7 @@ fn main() -> std::io::Result<()> {
     }
     else if args[2] != "sub" {
         println!("Error: Either use add for encrypting or sub for decrypting.");
-        process::exit(1);
+        process::exit(0);
     }
     
     let mut file = File::open(&args[1]).unwrap();
