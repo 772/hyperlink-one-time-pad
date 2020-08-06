@@ -11,5 +11,5 @@ The above example uses two files from the internet (both should have a bigger fi
 ## Notes
 - Remember that the internet providers may safe the files you download. Use this on top of normal encryption methods.
 - The order of the key parameters does not matter.
-- Hyperlinks must start with http:// or https://.");
+- Hyperlinks must start with http:// or https://.
  
