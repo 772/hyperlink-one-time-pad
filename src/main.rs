@@ -56,7 +56,6 @@ fn main() -> std::io::Result<()> {
     let length: usize = filesize as usize;
     let mut vec = vec![0u8; length];
     let _count = file.read(vec.as_mut_slice()).unwrap();
-    //println!("original_file = {:?}", vec); TODO
     
     for x in 3..param_amount {
         let mut online = false;
@@ -81,7 +80,7 @@ fn main() -> std::io::Result<()> {
         let mut vec2 = vec![0u8; length2];
         let count2 = file2.read(vec2.as_mut_slice()).unwrap();
         let times: f32 = (length2 as f32)/(length as f32);
-        println!("with {} bytes -> {} times layed over.", count2, times); // TODO: Output {:?} with vec2 rly not needed anymore?
+        println!("with {} bytes -> {} times layed over.", count2, times);
     
         let mut j = 0;
         for i in 0..length2 {
@@ -103,5 +102,3 @@ fn main() -> std::io::Result<()> {
     file.write_all(&vec)?;
     Ok(())
 }
-
-// Test via: cargo run -- test.txt add https://.com/72x92dp.png
