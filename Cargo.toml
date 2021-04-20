@@ -2,6 +2,10 @@
 name = "hyperlink-one-time-pad"
 version = "0.1.0"
 authors = ["772"]
+license-file = "LICENSE"
+description = "CLI tool that doesn't require you to save huge files for one-time-pad encryptions by using hyperlinks."
+repository = "https://github.com/772/hyperlink-one-time-pad/"
+readme = "README.md"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
