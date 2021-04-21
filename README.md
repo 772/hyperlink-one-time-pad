@@ -1,5 +1,7 @@
 # hyperlink-one-time-pad
 
+[![Latest Version]][crates.io]
+
 ## Example
 ```
 hyperlink-one-time-pad "secret_stuff.zip" add http://example.com/vid.mp4 http://example.com/data.rar
