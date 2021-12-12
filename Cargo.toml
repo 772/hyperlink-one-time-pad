@@ -1,6 +1,6 @@
 [package]
 name = "hyperlink-one-time-pad"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["772"]
 license-file = "LICENSE"
 description = "CLI tool that doesn't require you to save huge files for one-time-pad encryptions by using hyperlinks."
