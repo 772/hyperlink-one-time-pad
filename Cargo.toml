@@ -1,18 +1,16 @@
 [package]
 name = "hyperlink-one-time-pad"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["772"]
 license-file = "LICENSE"
 description = "CLI tool that doesn't require you to save huge files for one-time-pad encryptions by using hyperlinks."
 repository = "https://github.com/772/hyperlink-one-time-pad/"
 readme = "README.md"
-edition = "2021"
+edition = "2024"
 categories = ["command-line-interface", "command-line-utilities"]
 keywords = ["one-time-pad", "hyperlink", "encryption", "cli", "terminal"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-reqwest = { version = "0.11.7"}
-tokio = { version = "1.14.0", features = ["full"] }
-error-chain = "0.12.4"
+reqwest = { version = "0.12"}
+tokio = { version = "1.45", features = ["full"] }
+error-chain = "0.12"
