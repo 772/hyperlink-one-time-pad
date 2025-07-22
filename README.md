@@ -1,5 +1,8 @@
 _Minimalistic easy-to-understand encryption tool._
 
+[![License: GPL3](https://img.shields.io/badge/License-GNU%20GPL-blue)](https://opensource.org/license/gpl-3-0)
+[![Crate](https://img.shields.io/crates/v/hyperlink-one-time-pad.svg)](https://crates.io/crates/hyperlink-one-time-pad)
+
 # hyperlink-one-time-pad
 
 ## Example
