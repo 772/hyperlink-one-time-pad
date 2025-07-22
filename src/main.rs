@@ -20,8 +20,8 @@ error_chain! {
 async fn download_file(target: String) -> Result<()> {
     let response = reqwest::get(&target).await?;
     let path = Path::new("./tempfile_hyperlink-one-time-pad");
-    let mut file = match File::create(&path) {
-        Err(why) => panic!("couldn't create {}", why),
+    let mut file = match File::create(path) {
+        Err(why) => panic!("couldn't create {why}"),
         Ok(file) => file,
     };
     let content = response.bytes().await?;
@@ -77,7 +77,7 @@ fn main() -> std::io::Result<()> {
         let mut vec2 = vec![0u8; length2];
         let count2 = file2.read(vec2.as_mut_slice()).unwrap();
         let times: f32 = (length2 as f32) / (length as f32);
-        println!("with {} bytes -> {} times layed over.", count2, times);
+        println!("with {count2} bytes -> {times} times layed over.");
 
         let mut j = 0;
         for i in 0..length2 {
@@ -88,7 +88,7 @@ fn main() -> std::io::Result<()> {
                 foo = Wrapping(vec[j]) - Wrapping(vec2[i]);
             }
             vec[j] = foo.0;
-            j = j + 1;
+            j += 1;
             if j > length - 1 {
                 j = 0;
             }
